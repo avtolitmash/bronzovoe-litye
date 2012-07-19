@@ -1,0 +1,4 @@
+%h1= @article.title
+!= @article.body
+= render partial: 'comments/list', locals: { comments: @article.comments }
+= render partial: 'comments/form', locals: { commentable: @article }

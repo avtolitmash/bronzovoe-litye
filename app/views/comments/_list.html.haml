@@ -1,0 +1,7 @@
+%h2.comments Комментарии:
+.comments_list
+  - comments.each do |comment|
+    %pre
+      %a.anchor{ name: "comment-#{comment.id}" }
+      %span.muted.created_at= l comment.created_at, format: :comments
+      = comment.body

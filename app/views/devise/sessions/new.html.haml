@@ -1,0 +1,7 @@
+= twitter_bootstrap_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  = f.inputs 'Авторизация', :class => 'sign_in' do
+    = f.email_field :email
+    = f.password_field :password
+    = f.check_box :remember_me, 'запомнить меня' if devise_mapping.rememberable?
+  = f.submit 'Войти', class: 'btn btn-primary'
+= render 'devise/shared/links'

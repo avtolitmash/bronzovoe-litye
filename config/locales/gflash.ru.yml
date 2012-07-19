@@ -1,0 +1,21 @@
+ru:
+  gflash:
+    #
+    # These are the translations for the different titles.
+    #
+    titles:
+      notice: "Уведомление"
+      success: "Доступ"
+      warning: "Предупреждение"
+      error: "Ошибка"
+      progress: "Прогресс"
+    #
+    # Add gflash messages for controller actions:
+    # products:
+    #   create:
+    #     notice: "This is a notification"
+    #     error: "Something went wrong"
+    #
+    # Inside controller: 
+    # gflash :notice => true, :error => true
+    #

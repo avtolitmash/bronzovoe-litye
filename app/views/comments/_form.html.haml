@@ -1,0 +1,8 @@
+.well
+  = form_for [commentable, Comment.new] do |f|
+    %fieldset
+      .control-group
+        .controls
+          = f.text_area :body
+      .form_actions
+        = f.submit 'Добавить комментарий', class: 'btn btn-primary'

@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title Бронза
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = include_gritter
+  %body
+    = gflash
+    = gritter_flash_messages
+    .navbar
+      .navbar-inner
+        .container
+          = link_to 'Автолитмаш', root_path, class: 'brand'
+          %ul.nav
+            %li= link_to 'Статьи', articles_path
+            %li= link_to 'Официальный сайт', 'http://avtolitmash.ru'
+            %li= link_to 'Контакты', '#'
+    .row
+      .span3
+        .well{ style: 'padding:8px 0;' }
+          %ul.nav.nav-list
+            %li.nav-header Меню:
+            - @parent_articles.each do |parent_article|
+              %li= link_to parent_article.title, article_path(parent_article)
+      .span9
+        = yield
