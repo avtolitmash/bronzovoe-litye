@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.all
+    redirect_to Article.includes(:comments).where(parent_id: nil).first
   end
 
   def show

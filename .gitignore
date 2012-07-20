@@ -5,7 +5,12 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore bundler config
+/config/database.yml
+/public/assets
+/public/ckeditor_assets
+/public/system
 /.bundle
+/Gemfile.lock
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
